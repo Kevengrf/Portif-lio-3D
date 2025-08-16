@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portfólio 3D Interativo</title>
+    <link rel="stylesheet" href="./style.css">
+</head>
+<body>
+    <!-- O canvas para a cena 3D -->
+    <canvas class="webgl"></canvas>
+
+    <!-- Container para os elementos 2D (títulos e cards) -->
+    <div id="ui-container">
+        <!-- Os cards dos projetos/informações -->
+        <div class="card" data-index="0">
+            <button class="close-button">×</button>
+            <h3>Sobre Mim</h3>
+            <img src="img/keven.jpg" alt="Foto de Keven" class="profile-pic">
+            <p>Desenvolvedor de Soluções IoT com experiência na concepção de projetos inovadores para empresas
+como Accenture e Keycore. Profissional engajado e conectado ao ecossistema de startups e
+comunidades de tecnologia do Porto Digital, focado na integração de hardware e software para criar
+sistemas inteligentes, busco aplicar meu conhecimento em projetos desafiadores.</p>
+        </div>
+        <div class="card" data-index="1">
+            <button class="close-button">×</button>
+            <h3>Experiências</h3>
+            <p>Desenvolvedor de Soluções em IoT | Keycore Recife, PE | Agosto de 2024 - Presente -
+Desenvolvimento de conteúdo técnico e didático para o curso 'IoT na Prática'. - Implementação de
+projetos no parque tecnológico OCCA, incluindo sistemas de gamificação com matrizes de LED para a
+área de educação. - Criação de um jogo interativo com lasers (hardware e software). - Apresentação e
+validação técnica de protótipo IoT para stakeholders no Porto de Suape.
+
+Desenvolvedor Residente | Porto Digital (em parceria com Accenture)
+Recife, PE | Janeiro de 2024 - Julho de 2024
+- Desenvolvi uma réplica da Universidade Católica de Pernambuco no Metaverso, criando um
+ambiente virtual interativo e imersivo.
+- Criei o protótipo de um aplicativo mobile para otimizar o atendimento hospitalar, implementando
+um sistema de prognóstico baseado em uma anamnese express.</p>
+        </div>
+        <div class="card" data-index="2">
+            <button class="close-button">×</button>
+            <h3>Projetos</h3>
+            <p>Veja meus Projetos aqui!.<br><br>Ex: <a href="https://github.com/Kevengrf?tab=repositories">repositories</a></p>
+        </div>
+        <div class="card" data-index="3">
+            <button class="close-button">×</button>
+            <h3>Contato</h3>
+            <p>
+                <b>Email:</b> kevenwilliam2304@gmail.com<br>
+                <b>LinkedIn:</b> <a href="https://linkedin.com/in/kwsr" target="_blank">linkedin.com/in/kwsr</a><br>
+                <b>GitHub:</b> <a href="https://github.com/kevengrf" target="_blank">github.com/kevengrf</a><br>
+                <b>WhatsApp:</b> +55 81 98484-1617
+            </p>
+        </div>
+        <div class="card" data-index="4">
+            <button class="close-button">×</button>
+            <h3>FORMAÇÃO ACADÊMICA</h3>
+            <p><b>Sistemas para Internet</b><br>Universidade Católica de Pernambuco (UNICAP)<br>Conclusão prevista para Dezembro de 2025</p>
+        </div>
+    </div>
+
+    <script type="importmap">
+        {
+            "imports": {
+                "three": "https://unpkg.com/three@0.157.0/build/three.module.js",
+                "three/addons/": "https://unpkg.com/three@0.157.0/examples/jsm/"
+            }
+        }
+    </script>
+    <script type="module" src="./script.js"></script>
+</body>
+</html>

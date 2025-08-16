@@ -1,0 +1,143 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html, body {
+    overflow: hidden;
+    background-color: #0a0a1a;
+    font-family: Arial, sans-serif;
+}
+
+.webgl {
+    position: fixed;
+    top: 0;
+    left: 0;
+    outline: none;
+    display: block;
+}
+
+/* Container para toda a UI 2D */
+#ui-container {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    pointer-events: none; /* O container não interfere com o 3D */
+    z-index: 10;
+}
+
+/* Estilo dos títulos flutuantes */
+.label {
+    color: #fff;
+    font-size: 16px;
+    text-shadow: 0 0 5px #FFD700;
+    pointer-events: none; /* Títulos não são clicáveis */
+    user-select: none; /* Impede seleção de texto */
+}
+
+/* Estilo dos cards */
+.card {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    width: 90%;
+    max-width: 480px; /* Aumentado um pouco */
+    padding: 25px;
+    background: rgba(25, 40, 70, 0.85);
+    backdrop-filter: blur(15px);
+    border-radius: 15px;
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    color: #f0f0f0;
+    
+    opacity: 0;
+    pointer-events: none;
+    transform: translate(-50%, -50%) scale(0.9);
+    transition: opacity 0.4s ease, transform 0.4s ease;
+}
+
+.card.open {
+    opacity: 1;
+    pointer-events: auto;
+    transform: translate(-50%, -50%) scale(1);
+}
+
+.card h3 {
+    color: #FFD700; /* Cor dourada */
+    margin-bottom: 15px;
+    font-size: 1.5em;
+}
+
+.card p {
+    font-size: 1em;
+    line-height: 1.6;
+    margin-bottom: 20px;
+}
+
+.card a {
+    color: #FFD700;
+    text-decoration: none;
+    font-weight: bold;
+    border: 1px solid #FFD700;
+    padding: 8px 12px;
+    border-radius: 5px;
+    transition: background-color 0.3s, color 0.3s;
+}
+
+.card a:hover {
+    background-color: #FFD700;
+    color: #111;
+}
+
+.close-button {
+    position: absolute;
+    top: 10px;
+    right: 15px;
+    background: none;
+    border: none;
+    color: #fff;
+    font-size: 24px;
+    cursor: pointer;
+    opacity: 0.7;
+    transition: opacity 0.3s;
+}
+
+.close-button:hover {
+    opacity: 1;
+}
+
+.profile-pic {
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    border: 2px solid #FFD700;
+    float: left;
+    margin: 0 20px 10px 0;
+}
+
+/* --- Media Query para Responsividade Mobile --- */
+@media (max-width: 600px) {
+    .card {
+        width: 92%;
+        padding: 20px;
+    }
+
+    .card h3 {
+        font-size: 1.3em;
+    }
+
+    .card p {
+        font-size: 0.95em;
+    }
+
+    .profile-pic {
+        width: 80px;
+        height: 80px;
+    }
+
+    .label {
+        font-size: 14px;
+    }
+}
